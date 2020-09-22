@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>
+
+class Elephant{
+    public:
+        void sleep(){
+            std::cout<<"Zzz"<<"\n";
+
+        }
+        void feed(){
+            std::cout<<"Thank's"<<"\n";
+
+        }
+        void ride(){
+            std::cout<<"Let's go!"<<"\n";
+
+        }
+        void pet(){
+            std::cout<<"'happy elephant noises'"<<"\n";
+
+        }
+        void walk(){
+            std::cout<<"What a nice weather"<<"\n";
+
+        }
+        void play(){
+            std::cout<<"'joyful elephant noises'"<<"\n";
+
+        }
+
+    private:
+
+};
+
+int main()
+{
+    int n_sleep = 0;
+    int n_feed = 0;
+    int n_walk = 0;
+
+
+    Elephant Alexei;
+    std::string n = "start";
+    while(n!="end"){
+        std::cin >> n;
+        if(n_sleep > 4){
+            std::cout<<"i need some sleep"<<"\n";
+        }else if(n_feed > 4){
+            std::cout<<"feed me"<<"\n";
+        }else if(n_walk > 4){
+            std::cout<<"let's go for a walk"<<"\n";
+        }
+
+
+        if(n == "sleep"){
+            Alexei.sleep();
+            n_sleep = 0;
+        } else if(n =="feed"){
+            Alexei.feed();
+            n_feed = 0;
+        } else if(n =="ride"){
+            Alexei.ride();
+        } else if(n =="pet"){
+            Alexei.pet();
+        } else if(n =="walk"){
+            Alexei.walk();
+            n_walk = 0;
+        } else if(n =="play"){
+            Alexei.play();
+        }
+        n_feed++;
+        n_sleep++;
+        n_walk++;
+    }
+    return 0;
+}
